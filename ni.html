@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Refuge House</title>
+    <link rel="stylesheet" href="css/namy.css?v=1.16">
+    <script src="js/jquery.js?v=1.16"></script>
+    <style>
+        .tdheadyit{
+            width:14.29%;
+            text-align:center;
+        }
+        .top-bg-image{
+            margin:-5px;
+            min-width:100%;
+            max-width:100%;
+            width:100%;
+            min-height:400px;
+            max-height:500px;
+            background-image:url('/Assets/IMG_20240625_063359_735.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            opacity:0.4;
+        }
+        
+        /*FOR SLIDER*/
+        #slider {
+          width: 100%;
+          max-width: 600px;
+          overflow: hidden;
+          position: relative;
+        }
+        .slides {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+          width: 100%;
+        }
+        .slides img {
+          width: 100%;
+          display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class='body-container'>
+            <header class="header goldenrod-bg white">
+                <table class="desktop-only" style="width:100%; margin-top:10px;">
+                    <tr style="width:100%;">
+                        <td class="tdheadyit"><a href="#ministries">Ministries</a></td>
+                        <td class="tdheadyit"><a href="#request_prayer">Request Prayer</a></td>
+                        <td class="tdheadyit"><a href="#become_partner">Become Partner</a></td>
+                        <td class="tdheadyit"><a href="/">LOGO</a></td>
+                        <td class="tdheadyit"><a href="#service">Our Service</a></td>
+                        <td class="tdheadyit"><a href="#contact">Contact</a></td>
+                        <td class="tdheadyit"><a href="#give">Give</a></td>
+                        <td class="tdheadyit"><a href="#give">Give</a></td>
+                    </tr>
+                </table>
+                
+                
+                <!--<table class="top-menu mobile-only" style="width: 100%;">
+                    <tr style="font-size: 14px; width: 100%;">
+                        <td class="tdheader"><a href="/" class="brown tdheadyi">LOGO</a></td>
+                        <td class="tdheader"><a href="#ministries" class="brown tdheadyi">Ministries</a></td>
+                        <td class="tdheader"><a href="#request_prayer" class="brown tdheadyi">Request Prayer</a></td>
+                        <td class="tdheader"><a href="#become_partner" class="brown tdheadyi">Become Partner</a></td>
+                        <td class="tdheader"><a href="#service" class="brown tdheadyi">Our Service</a></td>
+                        <td class="tdheader"><a href="#contact" class="brown tdheadyi">Contact</a></td>
+                        <td class="tdheader"><a href="#give" class="brown tdheadyi">Give</a></td>
+                    </tr>
+                </table>-->
+            </header>
+            
+            <div class="columns1-equal-div-container">
+    
+                  <div class="columns1-equal-left-div">
+                      
+                      <div class="goldenrod-bg  top-bg-image">
+                          Welcome to The Refuge House
+                      </div>
+                      
+                  </div>
+              
+            </div>
+            
+            <footer class='footer text-align-center blue'>
+              &copy; The Refuse House
+            </footer>
+          </div>
+<script>
+    function showMobileMenu(){
+        $('.menu-fixed').toggle();
+    }
+</script>
+
+<script>
+const slider = document.querySelector('.slides');
+const images = document.querySelectorAll('.slides img');
+const totalImages = images.length;
+
+let currentIndex = 0;
+
+function moveSlider() {
+  currentIndex++;
+  if (currentIndex >= totalImages) {
+    currentIndex = 0;
+  }
+  const offset = -currentIndex * 100; // Shift by percentage
+  slider.style.transform = `translateX(${offset}%)`;
+}
+
+// Change image every 3 seconds
+setInterval(moveSlider, 3000);
+
+</script>
+</body>
+</html>
